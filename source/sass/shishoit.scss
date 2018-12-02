@@ -1,0 +1,30 @@
+.shishoit {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shishoit__icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #FFA07A;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.shishoit__name {
+
+}
+
+.shishoit__socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  padding-bottom: 20px;
+}
