@@ -2,22 +2,36 @@
   margin: 100px 0 50px 0;
   padding: 50px 0 0 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   border-top: 1px solid #CD5C5C;
+
+  @media (min-width: $width-tablet) {
+    flex-direction: row;
+  }
 }
 
 .page-footer__tagline {
-  width: 30%;
-  text-align: left;
+  @media (min-width: $width-tablet) {
+    width: 30%;
+    text-align: left;
+  }
 }
 
 .page-footer__extra {
-  width: 30%;
-  text-align: center;
+  margin: 20px 0 20px 0;
+  @media (min-width: $width-tablet) {
+    width: 30%;
+    text-align: center;
+    margin: 0;
+  }
 }
 
 .page-footer__copyright {
-  width: 30%;
-  text-align: right;
+  @media (min-width: $width-tablet) {
+    width: 30%;
+    text-align: right;
+  }
 }
