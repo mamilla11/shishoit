@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" style="scroll-behavior: smooth;">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,76 +8,212 @@
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body class="page">
     <div class="page__container">
-      <header class="page-header page-header--main">
+      <header class="page-header" id="main">
         <p class="page-header__logo">Shishoit</p>
-        <p class="page-header__content">
-          <span class="page-header__tagline">
-            This page is under construction
-          </span>
-          <a class="link" href="https://weather.shishoit.io" target="_blank">
-            Check out our weather stations project
-          </a>
-        </p>
+        <button class="button page-header__menu-toggle page-header__menu-toggle--no-js" type="button">
+          Mеню
+        </button>
+        <nav class="page-header__navigation page-header__navigation--open site-navigation">
+          <ul class="site-navigation__list">
+            <li class="site-navigation__item">
+              <a class="link site-navigation__link" href="#main">
+                Main
+              </a>
+            </li>
+            <li class="site-navigation__item">
+              <a class="link site-navigation__link" href="#about">
+                About
+              </a>
+            </li>
+            <li class="site-navigation__item">
+              <a class="link site-navigation__link" href="#gallery">
+                Gallery
+              </a>
+            </li>
+            <li class="site-navigation__item">
+              <a class="link site-navigation__link" href="#contacts">
+                Contacts
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
       <main>
-        <section class="about">
-          <h2 class="about__title">About us</h2>
-          <ul class="about__shishoits">
-            <li class="shishoit">
+        <section class="slider">
+          <h2 class="visually-hidden">Слайдер</h2>
+          <div class="slider__wrapper">
+            <input class="visually-hidden" type="radio" id="slide-1-radio" name="toggle" checked>
+            <input class="visually-hidden" type="radio" id="slide-2-radio" name="toggle">
+            <input class="visually-hidden" type="radio" id="slide-3-radio" name="toggle">
+            <input class="visually-hidden" type="radio" id="slide-4-radio" name="toggle">
+            <input class="visually-hidden" type="radio" id="slide-5-radio" name="toggle">
+            <div class="slider__controls">
+              <label class="slider__switcher" for="slide-1-radio"></label>
+              <label class="slider__switcher" for="slide-2-radio"></label>
+              <label class="slider__switcher" for="slide-3-radio"></label>
+              <label class="slider__switcher" for="slide-4-radio"></label>
+              <label class="slider__switcher" for="slide-5-radio"></label>
+            </div>
+            <div class="slider__content">
+              <div class="slider__slides">
+                <picture class="slider__slide">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/beekit_large@1x.webp 1x, img/webp/beekit_large@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/raster/beekit_large@1x.jpeg 1x, img/raster/beekit_large@2x.jpeg 2x">
+                  <source type="image/webp" srcset="img/webp/beekit_small@1x.webp 1x, img/webp/beekit_small@2x.webp 2x">
+                  <img class="slider__image" src="img/raster/beekit_small@1x.jpeg" srcset="img/raster/beekit_small@2x.jpeg 2x"
+                      width="768" height="300" alt="">
+                </picture>
+                <picture class="slider__slide">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/arkadii_large@1x.webp 1x, img/webp/arkadii_large@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/raster/arkadii_large@1x.jpeg 1x, img/raster/arkadii_large@2x.jpeg 2x">
+                  <source type="image/webp" srcset="img/webp/arkadii_small@1x.webp 1x, img/webp/arkadii_small@2x.webp 2x">
+                  <img class="slider__image" src="img/raster/arkadii_small@1x.jpeg" srcset="img/raster/arkadii_small@2x.jpeg 2x"
+                      width="768" height="300" alt="">
+                </picture>
+                <picture class="slider__slide">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/swallow_large@1x.webp 1x, img/webp/swallow_large@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/raster/swallow_large@1x.jpeg 1x, img/raster/swallow_large@2x.jpeg 2x">
+                  <source type="image/webp" srcset="img/webp/swallow_small@1x.webp 1x, img/webp/swallow_small@2x.webp 2x">
+                  <img class="slider__image" src="img/raster/swallow_small@1x.jpeg" srcset="img/raster/swallow_small@2x.jpeg 2x"
+                      width="768" height="300" alt="">
+                </picture>
+                <picture class="slider__slide">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/dragon_large@1x.webp 1x, img/webp/dragon_large@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/raster/dragon_large@1x.jpeg 1x, img/raster/dragon_large@2x.jpeg 2x">
+                  <source type="image/webp" srcset="img/webp/dragon_small@1x.webp 1x, img/webp/dragon_small@2x.webp 2x">
+                  <img class="slider__image" src="img/raster/dragon_small@1x.jpeg" srcset="img/raster/dragon_small@2x.jpeg 2x"
+                      width="768" height="300" alt="">
+                </picture>
+                <picture class="slider__slide">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/capacitor_large@1x.webp 1x, img/webp/capacitor_large@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/raster/capacitor_large@1x.jpeg 1x, img/raster/capacitor_large@2x.jpeg 2x">
+                  <source type="image/webp" srcset="img/webp/capacitor_small@1x.webp 1x, img/webp/capacitor_small@2x.webp 2x">
+                  <img class="slider__image" src="img/raster/capacitor_small@1x.jpeg" srcset="img/raster/capacitor_small@2x.jpeg 2x"
+                      width="768" height="300" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about" id="about">
+          <h2 class="title">About</h2>
+          <div class="about__shishoits">
+            <article class="shishoit">
               <div class="shishoit__icon">
                 <span class="shishoit__name">anashi</span>
               </div>
               <ul class="shishoit__socials">
                 <li>
-                  <a class="link link--insta" href="https://www.instagram.com/frozen_mamilla/" target="_blank">
+                  <a class="link shishoit__link" href="https://www.instagram.com/frozen_mamilla/" target="_blank">
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a class="link link--habr" href="https://habr.com/users/ana_lazareva/posts/" target="_blank">
+                  <a class="link shishoit__link" href="https://habr.com/users/ana_lazareva/posts/" target="_blank">
                     Habr
                   </a>
                 </li>
                 <li>
-                  <a class="link link--tg" href="https://t.me/anashi_t" target="_blank">
+                  <a class="link shishoit__link" href="https://t.me/anashi_t" target="_blank">
                     Telegram
                   </a>
                 </li>
               </ul>
-            </li>
-            <li class="shishoit">
+            </article>
+            <article>
+              <div class="shishoit__container">
+                <!-- <img class="shishoit__picture shishoit__picture--regular" src="img/team_2x.jpeg" width="497" height="477" alt="Фотография команды">
+                <img class="shishoit__picture shishoit__picture--surprized" src="img/team-surprized_2x.jpeg" width="497" height="477" alt="Фотография команды"> -->
+              </div>
+            </article>
+            <article class="shishoit">
               <div class="shishoit__icon">
                 <span class="shishoit__name">dimashi</span>
               </div>
               <ul class="shishoit__socials">
                 <li>
-                  <a class="link link--insta" href="https://www.instagram.com/dimonfofr1/" target="_blank">
+                  <a class="link shishoit__link" href="https://www.instagram.com/dimonfofr1/" target="_blank">
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a class="link link--habr" href="https://habr.com/users/dimonfofr/posts/" target="_blank">
+                  <a class="link shishoit__link" href="https://habr.com/users/dimonfofr/posts/" target="_blank">
                     Habr
                   </a>
                 </li>
                 <li>
-                  <a class="link link--tg" href="https://t.me/dmitriy_shi" target="_blank">
+                  <a class="link shishoit__link" href="https://t.me/dmitriy_shi" target="_blank">
                     Telegram
                   </a>
                 </li>
               </ul>
-              </li>
-          </ul>
+            </article>
+          </div>
+        </section>
+        <section class="gallery" id="gallery">
+          <h2 class="title">Gallery</h2>
+          <div class="gallery__wrapper"></div>
+          <section class="gallery__modal modal overlay hidden" tabindex="0">
+            <h2 class="modal__title visually-hidden">Просмотр фотографии</h2>
+            <div class="modal__wrapper photo">
+              <div class="photo__wrapper photo__wrapper--horizontal">
+                <picture class="photo__container">
+                  <source class="photo__img photo__img--webp" type="image/webp" srcset="img/webp/gallery/photo_1@1x.webp 1x, img/webp/gallery/photo_1@2x.webp 2x">
+                  <img class="photo__img photo__img--jpeg" src="img/raster/gallery/photo_1@1x.jpeg" srcset="img/raster/gallery/photo_1@2x.jpeg 2x" width="800" height="600" alt="">
+                </picture>
+                <button class="button photo__button photo__button--next"
+                        type="button"
+                        id="photo-next">
+                  Следующая фотография
+                </button>
+                <button class="button photo__button photo__button--prev"
+                        type="button"
+                        id="photo-prev">
+                  Предыдущая фотография
+                </button>
+              </div>
+              <p class="photo__description">Я не знаю, что изображено на этом фото=)</p>
+              <button class="button photo__button photo__button--close"
+                      type="reset"
+                      id="photo-close">
+                Закрыть
+              </button>
+            </div>
+          </section>
+        </section>
+        <secton class="contacts" id="contacts">
+          <h2 class="title">Contacts</h2>
         </section>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer" id="contacts">
         <span class="page-footer__tagline">Stay tuned</span>
         <span class="page-footer__extra">&hearts;</span>
         <span class="page-footer__copyright">Copyright &copy; 2018 shishoit.io</span>
       </footer>
     </div>
+
+    <template id="photo-preview">
+      <a href="#" class="photo-preview">
+        <picture class="photo-preview__wrapper">
+          <source class="photo-preview__img photo-preview__img--webp" type="image/webp" srcset="">
+          <img class="photo-preview__img photo-preview__img--jpeg" src="" srcset=""
+                        width="174" height="122" alt="">
+        </picture>
+      </a>
+    </template>
+
+    <script src="js/menu-toggle.js"></script>
+    <script src="js/photos.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/elements.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/preview.js"></script>
+    <script src="js/photo-modal.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

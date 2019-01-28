@@ -1,22 +1,15 @@
 .about {
-  border-top: 2px solid #CD5C5C;
+  margin-bottom: 60px;
+  border-top: 2px solid $link-color;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.about__title {
-  padding: 0 20px 0 20px;
-  margin: 0;
-  margin-top: -20px;
-  background: #ffffff;
-  text-align: center;
-  color: #696969;
+  padding: 0;
 }
 
 .about__shishoits {
   list-style: none;
-  margin: 0;
+  margin: 40px 0 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;

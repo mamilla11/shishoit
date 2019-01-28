@@ -1,0 +1,57 @@
+.photo-preview {
+  position: relative;
+  display: inline-block;
+  border: 1px solid $text-color;
+  margin: 1.1%;
+  cursor: pointer;
+  width: 150px;
+  height: auto;
+
+  @media (min-width: $width-tablet) {
+    width: 174px;
+
+    &::after {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: "";
+      width: 25px;
+      height: 25px;
+      background-image: url("../img/vector/zoom.svg");
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      display: block;
+    }
+  }
+}
+
+.photo-preview__wrapper {
+  display: flex;
+}
+
+.photo-preview__img {
+  width: 150px;
+  height: auto;
+
+  @media (min-width: $width-tablet) {
+    width: 174px;
+  }
+}
+
+.photo-preview:hover .photo-preview__img,
+.photo-preview:focus .photo-preview__img {
+  @media (min-width: $width-tablet) {
+    filter: contrast(0.7);
+    transform: scale3d(1.05, 1.05, 1.05);
+    transition: filter 0.3s ease 0s, transform 0.3s ease 0s;
+  }
+}

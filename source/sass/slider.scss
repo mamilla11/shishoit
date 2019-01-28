@@ -1,0 +1,82 @@
+.slider {
+  margin-bottom: 90px;
+}
+
+.slider__wrapper {
+  position: relative;
+}
+
+
+.slider__controls {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.slider__switcher {
+  display: inline-block;
+  margin: 0 3px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid $text-color;
+  border-radius: 50%;
+  background-color: lighten(gray, 40%);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.slider__content {
+  overflow: hidden;
+}
+
+.slider__slides {
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  transition: transform 1s ease;
+}
+
+.slider__slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slider__image {
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+}
+
+#slide-1-radio:checked ~ .slider__controls .slider__switcher[for="slide-1-radio"],
+#slide-2-radio:checked ~ .slider__controls .slider__switcher[for="slide-2-radio"],
+#slide-3-radio:checked ~ .slider__controls .slider__switcher[for="slide-3-radio"],
+#slide-4-radio:checked ~ .slider__controls .slider__switcher[for="slide-4-radio"],
+#slide-5-radio:checked ~ .slider__controls .slider__switcher[for="slide-5-radio"] {
+  background-color: lighten($text-color, 20%);
+}
+
+#slide-1-radio:checked ~ .slider__content .slider__slides {
+  transform: translate(0);
+}
+
+#slide-2-radio:checked ~ .slider__content .slider__slides {
+  transform: translate(-100%);
+}
+
+#slide-3-radio:checked ~ .slider__content .slider__slides {
+  transform: translate(-200%);
+}
+
+#slide-4-radio:checked ~ .slider__content .slider__slides {
+  transform: translate(-300%);
+}
+
+#slide-5-radio:checked ~ .slider__content .slider__slides {
+  transform: translate(-400%);
+}

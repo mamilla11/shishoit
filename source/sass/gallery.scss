@@ -1,0 +1,17 @@
+.gallery {
+  display: flex;
+  border-top: 2px solid $link-color;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.gallery__wrapper {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: flex-start;
+}

@@ -1,0 +1,10 @@
+.modal__wrapper {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+
+  max-width: 800px;
+  min-width: 300px;
+  height: auto;
+  transform: translateX(-50%);
+}
