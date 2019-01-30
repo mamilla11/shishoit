@@ -1,5 +1,5 @@
 .page-footer {
-  margin: 100px 0 50px 0;
+  margin: 56px 0 50px 0;
   padding: 50px 0 0 0;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,7 @@
 
   @media (min-width: $width-tablet) {
     flex-direction: row;
+    margin: 70px 0 50px 0;
   }
 }
 

@@ -1,6 +1,62 @@
 .contacts {
-  display: flex;
+  margin-bottom: 46px;
   border-top: 2px solid $link-color;
+  display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 60px;
+  }
+}
+
+.contacts__content {
+  padding-top: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 60px;
+  }
+}
+
+.contacts__text {
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: none;
+  text-align: center;
+  margin: 14px 0;
+
+  &--email {
+    color: lighten($text-color, 30%);
+  }
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 23px;
+    line-height: 29px;
+    margin: 20px 0;
+  }
+}
+
+.contacts__link {
+  position: relative;
+  text-transform: none;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  color: lighten($text-color, 30%);
+  font-weight: normal;
+  margin: 14px 0;
+
+  @media (min-width: $width-tablet) {
+    font-size: 23px;
+    line-height: 29px;
+    margin: 20px 0;
+  }
 }
