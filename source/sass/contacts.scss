@@ -22,13 +22,6 @@
 }
 
 .contacts__text {
-  font-family: "Arial", sans-serif;
-  font-size: 20px;
-  line-height: 26px;
-  text-transform: none;
-  text-align: center;
-  margin: 14px 0;
-
   &--email {
     color: lighten($text-color, 30%);
   }
@@ -36,27 +29,73 @@
   &--bold {
     font-weight: bold;
   }
+}
 
-  @media (min-width: $width-tablet) {
-    font-size: 23px;
-    line-height: 29px;
-    margin: 20px 0;
-  }
+.contacts__links {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .contacts__link {
-  position: relative;
-  text-transform: none;
-  font-family: "Arial", sans-serif;
-  font-size: 20px;
-  line-height: 26px;
-  color: lighten($text-color, 30%);
-  font-weight: normal;
-  margin: 14px 0;
+  margin: 10px 10px 20px 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 140px;
+  border: 1px solid $text-color;
+  border-radius: 5px;
+}
 
-  @media (min-width: $width-tablet) {
-    font-size: 23px;
-    line-height: 29px;
-    margin: 20px 0;
+.contacts__person {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts__socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 140px;
+}
+
+.contacts__button {
+  border: 1px solid darken(#fbb02d, 30%);
+  border-radius: 5px;
+  margin: 3px;
+  background-color: lighten(#fbb02d, 10%);
+  color: darken(#fbb02d, 40%);
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--insta {
+    background-image: url("../img/vector/insta-icon.svg");
+  }
+
+  &--habr {
+    background-size: cover;
+    background-image: url("../img/raster/habr-icon.png");
+  }
+
+  &--git {
+    background-image: url("../img/vector/github-icon.svg");
+  }
+
+  &--tg {
+    background-image: url("../img/vector/telegram-icon.svg");
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }

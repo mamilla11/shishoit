@@ -16,7 +16,8 @@
   var Gallery = {
     CONTAINER: '.gallery__wrapper',
     NEXT_PHOTO: '.photo__button--next',
-    PREV_PHOTO: '.photo__button--prev'
+    PREV_PHOTO: '.photo__button--prev',
+    CLOSE_BUTTON: '.photo__button--close'
   }
 
   window.elements = {

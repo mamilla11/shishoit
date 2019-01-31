@@ -46,11 +46,6 @@
 .projects__picture-wrapper {
   display: flex;
   flex-direction: column;
-
-  @media (min-width: $width-tablet) {
-    // width: 300px;
-    // height: 300px;
-  }
 }
 
 .projects__picture {
@@ -74,13 +69,13 @@
   position: relative;
   width: 130px;
   margin: 4px 10px;
-  border: 1px solid darken(#FBB02D, 30%);
+  border: 1px solid darken(#fbb02d, 30%);
   border-radius: 5px;
   text-align: center;
   display: flex;
   justify-content: center;
-  background-color: lighten(#FBB02D, 10%);
-  color: darken(#FBB02D, 40%);
+  background-color: lighten(#fbb02d, 10%);
+  color: darken(#fbb02d, 40%);
 
   &:hover,
   &:focus {

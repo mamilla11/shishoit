@@ -20,10 +20,15 @@ var jsonminify = require('gulp-jsonminify');
 
 var server = require("browser-sync").create();
 
-gulp.task("copy", function() {
+gulp.task("fonts", function() {
   return gulp.src("source/fonts/**/*.{woff,woff2}", {
     base: "source"
     })
+    .pipe(gulp.dest("build"));
+});
+
+gulp.task("icons", function () {
+  return gulp.src("./*.{png,ico}")
     .pipe(gulp.dest("build"));
 });
 
@@ -112,5 +117,5 @@ gulp.task("refresh", function(done) {
   gulp.watch("source/img/raster/**/*.{jpeg,jpg,png}", gulp.series("images", "webp", "refresh"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "images", "webp", "svg", "sprite", "html", "js"));
+gulp.task("build", gulp.series("clean", "fonts", "icons", "css", "images", "webp", "svg", "sprite", "html", "js"));
 gulp.task("start", gulp.series("build", "server"));
